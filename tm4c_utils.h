@@ -17,6 +17,11 @@
 // delay 1 millisecond based on clock cicles
 void DelayMS(unsigned long);
 
+// variable needed for port initialization
+volatile unsigned long delay;
+
+void PortF_init(void);
+
 #define SW2		(*((volatile uint32_t *)0x40025004)) //	PF0
 #define LED_RED 	(*((volatile uint32_t *)0x40025008)) // PF1
 #define LED_BLUE 	(*((volatile uint32_t *)0x40025010)) // PF2
